@@ -10,8 +10,10 @@ This includes the following.
 
 ## How to Login and Logout
 1. `curl -X POST http://localhost:8000/auth/login/ -d username=nshipman -d password=Test123` Returns: `{"key":"bed4d236ec94854d3d9a91ca1b02a00e3d9af347"}%`
-2. Visit the `/auth/login` endpoint to use the GUI variation.
+   1. You can verify login was successful by visiting the admin page and finding the token [here](http://127.0.0.1:8000/admin/authtoken/tokenproxy/)
+2. Visit the `/auth/login/` endpoint to use the GUI variation.
 3. To logout `curl -X POST http://127.0.0.1:8000/auth/logout/ -H "Authorization: Token bed4d236ec94854d3d9a91ca1b02a00e3d9af347"`
+   1. You can verify logout was successful by visiting the admin page [here](http://127.0.0.1:8000/admin/authtoken/tokenproxy/). The token should no longer exist. 
 
 
 `
